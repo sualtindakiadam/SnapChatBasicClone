@@ -191,6 +191,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Sttings" image="s.circle.fill" catalog="system" id="4dZ-M6-Z8B"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toSignInVC" modalPresentationStyle="fullScreen" id="2Za-Hx-JWJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p6R-SR-PDL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -231,7 +234,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="cfz-Td-GJH">
             <objects>
-                <tabBarController id="Ohd-Tt-uTJ" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar" id="Ohd-Tt-uTJ" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6Xw-f5-83I">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
