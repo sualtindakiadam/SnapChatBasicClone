@@ -20,7 +20,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     var snapArray = [Snap]()
     
     var choosenSnap : Snap?
-    var timeLeft : Int?
     
     
     override func viewDidLoad() {
@@ -37,12 +36,13 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     func getSnapsFromFirebase(){
         
         fireStoreDatabase.collection("Snaps").order(by: "date", descending: true).addSnapshotListener { snapshot, error in
+            
             if error != nil {
                 self.makeAlert(title: "error", message: error?.localizedDescription ?? "error")
             }else{
                 if snapshot?.isEmpty == false && snapshot != nil {
+                    self.snapArray.removeAll(keepingCapacity: false)
                     for document in snapshot!.documents{
-                        self.snapArray.removeAll(keepingCapacity: false)
                         let documentId=document.documentID
                         if let username = document.get("snapOwner") as? String{
                             if let imageUrlArray = document.get("imageUrlArray") as? [String]{
@@ -58,15 +58,15 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                                         }else{
                                             
                                             // Timeleft -> snapvc
-                                            
-                                            self.timeLeft = 24 - difference
+                                       
+                                            let snap = Snap(username: username, imageUrlArray: imageUrlArray, date: date.dateValue(), timeDifference: 24-difference)
+                                            self.snapArray.append(snap)
 
                                         }
                                     }
                                     
                                     
-                                    let snap = Snap(username: username, imageUrlArray: imageUrlArray, date: date.dateValue())
-                                    self.snapArray.append(snap)
+                             
                                 }
                             }
                         }
@@ -126,7 +126,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toSnapVC"{
             let destinationVC = segue.destination as! SnapViewController
-            destinationVC.selectedTime = timeLeft
             destinationVC.selectedSnap = choosenSnap
         }
     }
