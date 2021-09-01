@@ -10,8 +10,9 @@ target 'SnapChatBasicClone' do
 	pod 'Firebase/Firestore'
 	pod 'Firebase/Core'
 	pod 'Firebase/Storage'
-	
-
+	pod 'SDWebImage'
+	pod 'ImageSlideshow'
+	pod 'ImageSlideshow/Kingfisher'
 
 
   # Pods for SnapChatBasicClone

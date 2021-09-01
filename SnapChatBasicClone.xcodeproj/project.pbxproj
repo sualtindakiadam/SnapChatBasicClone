@@ -11,6 +11,9 @@
 		9514729726D91BBE0015EF76 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9514729626D91BBE0015EF76 /* UploadViewController.swift */; };
 		9514729926D91BD00015EF76 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9514729826D91BD00015EF76 /* SettingsViewController.swift */; };
 		9514729C26D91E8A0015EF76 /* SnapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9514729B26D91E8A0015EF76 /* SnapViewController.swift */; };
+		952E033926DE2B1900C4F5A6 /* UserSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952E033826DE2B1900C4F5A6 /* UserSingleton.swift */; };
+		952E033D26DE4FA900C4F5A6 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952E033C26DE4FA900C4F5A6 /* FeedTableViewCell.swift */; };
+		952E033F26DE52A000C4F5A6 /* Snap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952E033E26DE52A000C4F5A6 /* Snap.swift */; };
 		9569DCF726D910360023F29F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9569DCF626D910360023F29F /* AppDelegate.swift */; };
 		9569DCF926D910360023F29F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9569DCF826D910360023F29F /* SceneDelegate.swift */; };
 		9569DCFB26D910360023F29F /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9569DCFA26D910360023F29F /* SignInViewController.swift */; };
@@ -26,6 +29,9 @@
 		9514729626D91BBE0015EF76 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		9514729826D91BD00015EF76 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		9514729B26D91E8A0015EF76 /* SnapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapViewController.swift; sourceTree = "<group>"; };
+		952E033826DE2B1900C4F5A6 /* UserSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSingleton.swift; sourceTree = "<group>"; };
+		952E033C26DE4FA900C4F5A6 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		952E033E26DE52A000C4F5A6 /* Snap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Snap.swift; sourceTree = "<group>"; };
 		9569DCF326D910360023F29F /* SnapChatBasicClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapChatBasicClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9569DCF626D910360023F29F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9569DCF826D910360023F29F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,8 +74,18 @@
 				9514729426D91BB20015EF76 /* FeedViewController.swift */,
 				9569DCFA26D910360023F29F /* SignInViewController.swift */,
 				9514729B26D91E8A0015EF76 /* SnapViewController.swift */,
+				952E033C26DE4FA900C4F5A6 /* FeedTableViewCell.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		952E033726DE2AFF00C4F5A6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				952E033826DE2B1900C4F5A6 /* UserSingleton.swift */,
+				952E033E26DE52A000C4F5A6 /* Snap.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		9569DCEA26D910360023F29F = {
@@ -93,6 +109,7 @@
 		9569DCF526D910360023F29F /* SnapChatBasicClone */ = {
 			isa = PBXGroup;
 			children = (
+				952E033726DE2AFF00C4F5A6 /* Model */,
 				9514729A26D91BE20015EF76 /* ViewControllers */,
 				9569DCF626D910360023F29F /* AppDelegate.swift */,
 				9569DCF826D910360023F29F /* SceneDelegate.swift */,
@@ -230,11 +247,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9569DCFB26D910360023F29F /* SignInViewController.swift in Sources */,
+				952E033F26DE52A000C4F5A6 /* Snap.swift in Sources */,
 				9514729726D91BBE0015EF76 /* UploadViewController.swift in Sources */,
 				9569DCF726D910360023F29F /* AppDelegate.swift in Sources */,
 				9514729526D91BB20015EF76 /* FeedViewController.swift in Sources */,
 				9514729C26D91E8A0015EF76 /* SnapViewController.swift in Sources */,
 				9569DCF926D910360023F29F /* SceneDelegate.swift in Sources */,
+				952E033926DE2B1900C4F5A6 /* UserSingleton.swift in Sources */,
+				952E033D26DE4FA900C4F5A6 /* FeedTableViewCell.swift in Sources */,
 				9514729926D91BD00015EF76 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
